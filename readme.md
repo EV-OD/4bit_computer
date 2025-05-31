@@ -89,7 +89,7 @@ All operations are performed as: `A = B OP C` (except `NOT`)
 ---
 
 ## 🖼️ Screenshots
-> ![ALU Simulation Screenshot](./4bit.jpg)
+> ![Simulation Screenshot](./4bit.jpg)
 > ![Circuit](./4bitClear.jpg)
 ---
 
