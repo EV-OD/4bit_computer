@@ -12,7 +12,7 @@ Welcome to the official documentation for a custom 4-bit microprocessor. This sy
 - **Separated Program and Data RAM**
 - **I/O-mapped architecture**
 - **Max 16 core opcodes due to 4-bit limit**  
-  > ⚠️ Extension mechanism under development to allow more instructions (e.g. `JNZ`, `CMP`, etc.)
+    > ⚠️ Extension mechanism under development to allow more instructions (e.g. `JNZ`, `CMP`, etc.)
 
 ---
 
@@ -88,6 +88,11 @@ All operations are performed as: `A = B OP C` (except `NOT`)
 
 ---
 
+## 🖼️ Screenshots
+> ![ALU Simulation Screenshot](./4bit.jpg)
+> ![Circuit](./4bitClear.jpg)
+---
+
 ## 💡 Example Program
 
 ### 📋 Task
@@ -113,6 +118,8 @@ OUT 4         ; Output A → I/O[4]
 
 STA 0         ; Store A → memory[0x0]
 
+NOP          ; No operation (required after STA)
+
 JMP 5         ; Jump to instruction at address 5 (MOV C, A)
 ```
 
@@ -134,9 +141,9 @@ JMP 5         ; Jump to instruction at address 5 (MOV C, A)
 - STA requires a following NOP due to memory write latency.
 - Opcodes are 4-bit limited (max 16 instructions), which restricts expansion.
 - A new instruction encoding architecture is under development to enable:
-  - Conditional jumps (JNZ, JZ, JC)
-  - Comparisons and calls
-  - More advanced I/O features
+    - Conditional jumps (JNZ, JZ, JC)
+    - Comparisons and calls
+    - More advanced I/O features
 - Program and data memory are independently addressed.
 - All I/O and memory addresses are 4-bit wide (0–15).
 ```
