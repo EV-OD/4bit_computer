@@ -109,12 +109,11 @@ MOV C, A      ; A → C
 
 ADD           ; A = B + C
 
-OUT 1         ; Output A → I/O[1]
+OUT 4         ; Output A → I/O[4]
 
 STA 0         ; Store A → memory[0x0]
-NOP           ; Required after STA
 
-JMP 0         ; Loop back
+JMP 5         ; Jump to instruction at address 5 (MOV C, A)
 ```
 
 ## 🔧 Reserved for Future Instructions
